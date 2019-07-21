@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>数据结构与算法 ---稀疏数组 | Jiaqi&#39;s blogs</title>
+  <title>Category: 生活 | Jiaqi&#39;s blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="稀疏数组基本介绍:当一个数组中大部分元素为0时, 或者为同一个值的数组时, 可以使用稀疏数组来保存该数组.">
-<meta name="keywords" content="知识学习">
-<meta property="og:type" content="article">
-<meta property="og:title" content="数据结构与算法 ---稀疏数组">
-<meta property="og:url" content="http://yoursite.com/2019/07/11/我的第一篇博客/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Jiaqi&#39;s blogs">
+<meta property="og:url" content="http://yoursite.com/categories/生活/index.html">
 <meta property="og:site_name" content="Jiaqi&#39;s blogs">
-<meta property="og:description" content="稀疏数组基本介绍:当一个数组中大部分元素为0时, 或者为同一个值的数组时, 可以使用稀疏数组来保存该数组.">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-21T08:06:18.424Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据结构与算法 ---稀疏数组">
-<meta name="twitter:description" content="稀疏数组基本介绍:当一个数组中大部分元素为0时, 或者为同一个值的数组时, 可以使用稀疏数组来保存该数组.">
+<meta name="twitter:title" content="Jiaqi&#39;s blogs">
   
     <link rel="alternative" href="/atom.xml" title="Jiaqi&#39;s blogs" type="application/atom+xml">
   
@@ -155,233 +150,71 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-我的第一篇博客" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      数据结构与算法 ---稀疏数组
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/07/21/暑假里的两次小活动/" class="archive-article-date">
+  	<time datetime="2019-07-21T08:25:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-21</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/07/21/暑假里的两次小活动/">暑假里的两次小活动~</a>
     </h1>
   
 
-
-        <!--显示阅读次数-->
-        
-        <br/>
-        <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
-          <span class="icon-sort"></span>
-          <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
-            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
-          </span>
-        </a>
-        
-
-        
-        <a href="/2019/07/11/我的第一篇博客/" class="archive-article-date">
-  	<time datetime="2019-07-12T06:13:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<h2 id="稀疏数组基本介绍"><a href="#稀疏数组基本介绍" class="headerlink" title="稀疏数组基本介绍:"></a>稀疏数组基本介绍:</h2><p>当一个数组中大部分元素为0时, 或者为同一个值的数组时, 可以使用稀疏数组来保存该数组.</p>
-<a id="more"></a>
-<h2 id="稀疏数组的处理方法"><a href="#稀疏数组的处理方法" class="headerlink" title="稀疏数组的处理方法:"></a>稀疏数组的处理方法:</h2><ol>
-<li>记录数组一共有几行几列, 有多少个不同的值.</li>
-<li>把具体有不同值的元素的行列及值记录在一个小规模的数组中, 从而缩小程序的规模.</li>
-</ol>
-<h2 id="二维数组转换稀疏数组思路"><a href="#二维数组转换稀疏数组思路" class="headerlink" title="二维数组转换稀疏数组思路"></a>二维数组转换稀疏数组思路</h2><ol>
-<li>遍历原始的二维数组, 得到有效数据的个数sum</li>
-<li>根据sum就可以创建稀疏数组sparseArr int[sum +1][3]</li>
-<li>将二维数组的有效数据存入稀疏数组</li>
-</ol>
-<h2 id="稀疏数组转换二维数组的思路"><a href="#稀疏数组转换二维数组的思路" class="headerlink" title="稀疏数组转换二维数组的思路"></a>稀疏数组转换二维数组的思路</h2><ol>
-<li>先读区稀疏数组的第一行, 根据第一行的数据, 创建原始的二维数组, 比如: chessArr int[11][11]</li>
-<li>再读取稀疏数组后几行的数据, 并赋给原始的二维数组.</li>
-</ol>
-<p><strong>Reference</strong><br><a href="https://www.bilibili.com/video/av54029771/?p=9&t=244" target="_blank" rel="noopener">尚硅谷 —韩顺平</a></p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/weixin.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">知识学习</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Vlogs</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
+        			<a href="/categories/生活//" class="article-tag-list-link color3">生活</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/11/我的第一篇博客/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/07/21/暑假里的两次小活动/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          暑假里的两次小活动~
-        
-      </div>
-    </a>
   
   
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#稀疏数组基本介绍"><span class="toc-number">1.</span> <span class="toc-text">稀疏数组基本介绍:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#稀疏数组的处理方法"><span class="toc-number">2.</span> <span class="toc-text">稀疏数组的处理方法:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二维数组转换稀疏数组思路"><span class="toc-number">3.</span> <span class="toc-text">二维数组转换稀疏数组思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#稀疏数组转换二维数组的思路"><span class="toc-number">4.</span> <span class="toc-text">稀疏数组转换二维数组的思路</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -410,10 +243,10 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
-		isCategory: false,
+		isCategory: true,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
