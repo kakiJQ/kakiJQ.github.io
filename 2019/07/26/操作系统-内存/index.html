@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>操作系统 ---内存 | Jiaqi&#39;s blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="什么是内存, 有何作用存储单元,内存地址 的概念理解和联系按字节编址, 按字编址进程运行的基本原理指令的工作原理操作码+若干参数(可能包含地址参数)逻辑地址(相对地址) vs 物理地址(绝对地址)从写程序到程序运行编辑源代码文件编译由源码文件生成目标模块(高级语言翻译成机器语言) 链接由目标模块生成装入模块, 链接后生成完整的逻辑地址 装入将装入模块装入内存, 装入后形成物理地址 三种链接方式静">
+  <meta name="description" content="什么是内存, 有何作用 存储单元,内存地址 的概念理解和联系  按字节编址, 按字编址">
 <meta property="og:type" content="article">
 <meta property="og:title" content="操作系统 ---内存">
 <meta property="og:url" content="http://yoursite.com/2019/07/26/操作系统-内存/index.html">
 <meta property="og:site_name" content="Jiaqi&#39;s blogs">
-<meta property="og:description" content="什么是内存, 有何作用存储单元,内存地址 的概念理解和联系按字节编址, 按字编址进程运行的基本原理指令的工作原理操作码+若干参数(可能包含地址参数)逻辑地址(相对地址) vs 物理地址(绝对地址)从写程序到程序运行编辑源代码文件编译由源码文件生成目标模块(高级语言翻译成机器语言) 链接由目标模块生成装入模块, 链接后生成完整的逻辑地址 装入将装入模块装入内存, 装入后形成物理地址 三种链接方式静">
+<meta property="og:description" content="什么是内存, 有何作用 存储单元,内存地址 的概念理解和联系  按字节编址, 按字编址">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-27T01:46:07.314Z">
+<meta property="og:updated_time" content="2019-07-27T01:59:44.013Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="操作系统 ---内存">
-<meta name="twitter:description" content="什么是内存, 有何作用存储单元,内存地址 的概念理解和联系按字节编址, 按字编址进程运行的基本原理指令的工作原理操作码+若干参数(可能包含地址参数)逻辑地址(相对地址) vs 物理地址(绝对地址)从写程序到程序运行编辑源代码文件编译由源码文件生成目标模块(高级语言翻译成机器语言) 链接由目标模块生成装入模块, 链接后生成完整的逻辑地址 装入将装入模块装入内存, 装入后形成物理地址 三种链接方式静">
+<meta name="twitter:description" content="什么是内存, 有何作用 存储单元,内存地址 的概念理解和联系  按字节编址, 按字编址">
   
     <link rel="alternative" href="/atom.xml" title="Jiaqi&#39;s blogs" type="application/atom+xml">
   
@@ -176,15 +176,69 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<h2 id="什么是内存-有何作用"><a href="#什么是内存-有何作用" class="headerlink" title="什么是内存, 有何作用"></a>什么是内存, 有何作用</h2><h3 id="存储单元-内存地址-的概念理解和联系"><a href="#存储单元-内存地址-的概念理解和联系" class="headerlink" title="存储单元,内存地址 的概念理解和联系"></a>存储单元,内存地址 的概念理解和联系</h3><h3 id="按字节编址-按字编址"><a href="#按字节编址-按字编址" class="headerlink" title="按字节编址, 按字编址"></a>按字节编址, 按字编址</h3><h2 id="进程运行的基本原理"><a href="#进程运行的基本原理" class="headerlink" title="进程运行的基本原理"></a>进程运行的基本原理</h2><h3 id="指令的工作原理"><a href="#指令的工作原理" class="headerlink" title="指令的工作原理"></a>指令的工作原理</h3><h4 id="操作码-若干参数-可能包含地址参数"><a href="#操作码-若干参数-可能包含地址参数" class="headerlink" title="操作码+若干参数(可能包含地址参数)"></a>操作码+若干参数(可能包含地址参数)</h4><h3 id="逻辑地址-相对地址-vs-物理地址-绝对地址"><a href="#逻辑地址-相对地址-vs-物理地址-绝对地址" class="headerlink" title="逻辑地址(相对地址) vs 物理地址(绝对地址)"></a>逻辑地址(相对地址) vs 物理地址(绝对地址)</h3><h3 id="从写程序到程序运行"><a href="#从写程序到程序运行" class="headerlink" title="从写程序到程序运行"></a>从写程序到程序运行</h3><h4 id="编辑源代码文件"><a href="#编辑源代码文件" class="headerlink" title="编辑源代码文件"></a>编辑源代码文件</h4><h4 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h4><p>由源码文件生成目标模块(高级语言翻译成机器语言)</p>
-<h4 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h4><p>由目标模块生成装入模块, 链接后生成完整的逻辑地址</p>
-<h4 id="装入"><a href="#装入" class="headerlink" title="装入"></a>装入</h4><p>将装入模块装入内存, 装入后形成物理地址</p>
-<h3 id="三种链接方式"><a href="#三种链接方式" class="headerlink" title="三种链接方式"></a>三种链接方式</h3><h4 id="静态链接"><a href="#静态链接" class="headerlink" title="静态链接"></a>静态链接</h4><p>装入前形成一个完整装入模块</p>
-<h4 id="装入时动态链接"><a href="#装入时动态链接" class="headerlink" title="装入时动态链接"></a>装入时动态链接</h4><p>运行前边装入边链接</p>
-<h4 id="运行时动态链接"><a href="#运行时动态链接" class="headerlink" title="运行时动态链接"></a>运行时动态链接</h4><p>运行时需要目标模块才装入并链接</p>
-<h3 id="是那种装入方式"><a href="#是那种装入方式" class="headerlink" title="是那种装入方式"></a>是那种装入方式</h3><h4 id="绝对装入"><a href="#绝对装入" class="headerlink" title="绝对装入"></a>绝对装入</h4><p>编译时产生绝对地址</p>
-<h4 id="可重定位装入"><a href="#可重定位装入" class="headerlink" title="可重定位装入"></a>可重定位装入</h4><p>装入时将逻辑地址转换为物理地址</p>
-<h4 id="动态运行时装入"><a href="#动态运行时装入" class="headerlink" title="动态运行时装入"></a>动态运行时装入</h4><p>运行时将逻辑地址转换为物理地址, 需设置重定位寄存器</p>
+<h2 id="什么是内存-有何作用"><a href="#什么是内存-有何作用" class="headerlink" title="什么是内存, 有何作用"></a>什么是内存, 有何作用</h2><ul>
+<li><p>存储单元,内存地址 的概念理解和联系</p>
+</li>
+<li><p>按字节编址, 按字编址</p>
+<a id="more"></a>
+<h2 id="进程运行的基本原理"><a href="#进程运行的基本原理" class="headerlink" title="进程运行的基本原理"></a>进程运行的基本原理</h2></li>
+<li><p>指令的工作原理</p>
+<ul>
+<li>操作码+若干参数(可能包含地址参数)</li>
+</ul>
+</li>
+<li><p>逻辑地址(相对地址) vs 物理地址(绝对地址)</p>
+</li>
+<li><p>从写程序到程序运行</p>
+<ul>
+<li>编辑源代码文件</li>
+<li>编译<ul>
+<li>由源码文件生成目标模块(高级语言翻译成机器语言)</li>
+</ul>
+</li>
+<li>链接<ul>
+<li>由目标模块生成装入模块, 链接后生成完整的逻辑地址</li>
+</ul>
+</li>
+<li>装入<ul>
+<li>将装入模块装入内存, 装入后形成物理地址</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>三种链接方式</p>
+<ul>
+<li>静态链接<ul>
+<li>装入前形成一个完整装入模块</li>
+</ul>
+</li>
+<li>装入时动态链接<ul>
+<li>运行前边装入边链接</li>
+</ul>
+</li>
+<li>运行时动态链接<ul>
+<li>运行时需要目标模块才装入并链接</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>三种装入方式</p>
+<ul>
+<li>绝对装入<ul>
+<li>编译时产生绝对地址</li>
+</ul>
+</li>
+<li>可重定位装入<ul>
+<li>装入时将逻辑地址转换为物理地址</li>
+</ul>
+</li>
+<li>动态运行时装入<ul>
+<li>运行时将逻辑地址转换为物理地址, 需设置重定位寄存器</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
       
 
@@ -317,7 +371,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是内存-有何作用"><span class="toc-number">1.</span> <span class="toc-text">什么是内存, 有何作用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#存储单元-内存地址-的概念理解和联系"><span class="toc-number">1.1.</span> <span class="toc-text">存储单元,内存地址 的概念理解和联系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#按字节编址-按字编址"><span class="toc-number">1.2.</span> <span class="toc-text">按字节编址, 按字编址</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进程运行的基本原理"><span class="toc-number">2.</span> <span class="toc-text">进程运行的基本原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#指令的工作原理"><span class="toc-number">2.1.</span> <span class="toc-text">指令的工作原理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#操作码-若干参数-可能包含地址参数"><span class="toc-number">2.1.1.</span> <span class="toc-text">操作码+若干参数(可能包含地址参数)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#逻辑地址-相对地址-vs-物理地址-绝对地址"><span class="toc-number">2.2.</span> <span class="toc-text">逻辑地址(相对地址) vs 物理地址(绝对地址)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#从写程序到程序运行"><span class="toc-number">2.3.</span> <span class="toc-text">从写程序到程序运行</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#编辑源代码文件"><span class="toc-number">2.3.1.</span> <span class="toc-text">编辑源代码文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#编译"><span class="toc-number">2.3.2.</span> <span class="toc-text">编译</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#链接"><span class="toc-number">2.3.3.</span> <span class="toc-text">链接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#装入"><span class="toc-number">2.3.4.</span> <span class="toc-text">装入</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三种链接方式"><span class="toc-number">2.4.</span> <span class="toc-text">三种链接方式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#静态链接"><span class="toc-number">2.4.1.</span> <span class="toc-text">静态链接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#装入时动态链接"><span class="toc-number">2.4.2.</span> <span class="toc-text">装入时动态链接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#运行时动态链接"><span class="toc-number">2.4.3.</span> <span class="toc-text">运行时动态链接</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#是那种装入方式"><span class="toc-number">2.5.</span> <span class="toc-text">是那种装入方式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#绝对装入"><span class="toc-number">2.5.1.</span> <span class="toc-text">绝对装入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#可重定位装入"><span class="toc-number">2.5.2.</span> <span class="toc-text">可重定位装入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#动态运行时装入"><span class="toc-number">2.5.3.</span> <span class="toc-text">动态运行时装入</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是内存-有何作用"><span class="toc-number">1.</span> <span class="toc-text">什么是内存, 有何作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进程运行的基本原理"><span class="toc-number">2.</span> <span class="toc-text">进程运行的基本原理</span></a></li></ol>
                     </div>
                 </span>
             </div>
