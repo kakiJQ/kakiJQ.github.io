@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>数据结构与算法 ---稀疏数组 | Jiaqi&#39;s blogs</title>
+  <title>Archives: 2020/3 | Jiaqi&#39;s blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="稀疏数组基本介绍:当一个数组中大部分元素为0时, 或者为同一个值的数组时, 可以使用稀疏数组来保存该数组.">
-<meta name="keywords" content="知识学习">
-<meta property="og:type" content="article">
-<meta property="og:title" content="数据结构与算法 ---稀疏数组">
-<meta property="og:url" content="http://yoursite.com/2019/07/11/我的第一篇博客/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Jiaqi&#39;s blogs">
+<meta property="og:url" content="http://yoursite.com/archives/2020/03/index.html">
 <meta property="og:site_name" content="Jiaqi&#39;s blogs">
-<meta property="og:description" content="稀疏数组基本介绍:当一个数组中大部分元素为0时, 或者为同一个值的数组时, 可以使用稀疏数组来保存该数组.">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-09T05:33:17.476Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据结构与算法 ---稀疏数组">
-<meta name="twitter:description" content="稀疏数组基本介绍:当一个数组中大部分元素为0时, 或者为同一个值的数组时, 可以使用稀疏数组来保存该数组.">
+<meta name="twitter:title" content="Jiaqi&#39;s blogs">
   
     <link rel="alternative" href="/atom.xml" title="Jiaqi&#39;s blogs" type="application/atom+xml">
   
@@ -155,226 +150,43 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-我的第一篇博客" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
+            
+  
+  
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      数据结构与算法 ---稀疏数组
-    </h1>
-  
-
-
-        
-        <a href="/2019/07/11/我的第一篇博客/" class="archive-article-date">
-  	<time datetime="2019-07-11T15:13:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/03/19/HaspMap/" class="archive-article-date">
+  	<time datetime="2020-03-19T07:41:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-19</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<h2 id="稀疏数组基本介绍"><a href="#稀疏数组基本介绍" class="headerlink" title="稀疏数组基本介绍:"></a>稀疏数组基本介绍:</h2><p>当一个数组中大部分元素为0时, 或者为同一个值的数组时, 可以使用稀疏数组来保存该数组.</p>
-<a id="more"></a>
-<h2 id="稀疏数组的处理方法"><a href="#稀疏数组的处理方法" class="headerlink" title="稀疏数组的处理方法:"></a>稀疏数组的处理方法:</h2><ol>
-<li>记录数组一共有几行几列, 有多少个不同的值.</li>
-<li>把具体有不同值的元素的行列及值记录在一个小规模的数组中, 从而缩小程序的规模.</li>
-</ol>
-<h2 id="二维数组转换稀疏数组思路"><a href="#二维数组转换稀疏数组思路" class="headerlink" title="二维数组转换稀疏数组思路"></a>二维数组转换稀疏数组思路</h2><ol>
-<li>遍历原始的二维数组, 得到有效数据的个数sum</li>
-<li>根据sum就可以创建稀疏数组sparseArr int[sum +1][3]</li>
-<li>将二维数组的有效数据存入稀疏数组</li>
-</ol>
-<h2 id="稀疏数组转换二维数组的思路"><a href="#稀疏数组转换二维数组的思路" class="headerlink" title="稀疏数组转换二维数组的思路"></a>稀疏数组转换二维数组的思路</h2><ol>
-<li>先读区稀疏数组的第一行, 根据第一行的数据, 创建原始的二维数组, 比如: chessArr int[11][11]</li>
-<li>再读取稀疏数组后几行的数据, 并赋给原始的二维数组.</li>
-</ol>
-<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现:"></a>代码实现:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">public class algorithm &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		//创建一个原始的二维数组 11*11</span><br><span class="line">		//0: 表示没有棋子, 1: 表示黑子, 2: 表示白子</span><br><span class="line">		int chessArr1 [][] = new int [11][11];</span><br><span class="line">		chessArr1 [1][2] = 1;</span><br><span class="line">		chessArr1 [2][3] = 2;</span><br><span class="line">		chessArr1 [4][5] = 2;</span><br><span class="line">		//输出原始二维数组</span><br><span class="line">		System.out.println(&quot;原始的二维数组&quot;);</span><br><span class="line">		for (int[] row : chessArr1) &#123;</span><br><span class="line">			for(int data : row) &#123;</span><br><span class="line">				System.out.printf(&quot;%s\t&quot;, data);</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		//将二维数组转换为稀疏数组</span><br><span class="line">		//1. 先遍历二维数组 得到非0数据的个数</span><br><span class="line">		int sum = 0;</span><br><span class="line">		for(int i = 0; i &lt; 11; i++) &#123;</span><br><span class="line">			for(int j = 0; j &lt; 11; j++) &#123;</span><br><span class="line">				if(chessArr1[i][j] != 0) &#123;</span><br><span class="line">					sum ++;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		//创建对应的稀疏数组</span><br><span class="line">		int sparseArr[][] = new int[sum+1][3];</span><br><span class="line">		//给稀疏数组赋值</span><br><span class="line">		sparseArr[0][0] = 11;</span><br><span class="line">	    sparseArr[0][1] = 11;</span><br><span class="line">	    sparseArr[0][2] = sum;</span><br><span class="line">	    </span><br><span class="line">	    //遍历二维数组, 将非零的值存放在sparseArr中</span><br><span class="line">	    int count = 0;//count用于记录是第几个非0数据</span><br><span class="line">	    for(int i = 0; i &lt; 11; i++) &#123;</span><br><span class="line">			for(int j = 0; j &lt; 11; j++) &#123;</span><br><span class="line">				if(chessArr1 [i][j] != 0) &#123;</span><br><span class="line">					count++;</span><br><span class="line">					sparseArr[count][0] = i;</span><br><span class="line">				    sparseArr[count][1] = j;</span><br><span class="line">				    sparseArr[count][2] = chessArr1[i][j];</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	    </span><br><span class="line">	    //输出稀疏数组的形式</span><br><span class="line">	    System.out.println();</span><br><span class="line">	    System.out.println(&quot;得到稀疏数组为~~~~&quot;);</span><br><span class="line">	    for (int i = 0; i&lt; sparseArr.length; i++) &#123;</span><br><span class="line">	    	System.out.printf(&quot;%d\t%d\t%d\t\n&quot;, sparseArr[i][0],sparseArr[i][1],sparseArr[i][2]);</span><br><span class="line">	    &#125;</span><br><span class="line">	    System.out.println();</span><br><span class="line">	    </span><br><span class="line">	    //将稀疏数组回复成原始的二维数组</span><br><span class="line">	    //1. 先读区稀疏数组的第一行, 根据第一行的数据, 创建原始的二维数组, 比如上面的</span><br><span class="line">	    int chessArr2[][] = new int[sparseArr[0][0]][sparseArr[0][1]];</span><br><span class="line">	    </span><br><span class="line">	    </span><br><span class="line">	    </span><br><span class="line">	    //2. 在读稀疏数组后几行的数据, 并赋给 原始的二维数组即可.chessArr2 = int [11][11];</span><br><span class="line">	    for (int i = 1; i&lt; sparseArr.length; i++) &#123;</span><br><span class="line">	    	chessArr2[sparseArr[i][0]][sparseArr[i][1]] = sparseArr[i][2];</span><br><span class="line">	    &#125;</span><br><span class="line">	    </span><br><span class="line">	  //恢复后的二维数组</span><br><span class="line">	    System.out.println(&quot;恢复后的二维数组&quot;);</span><br><span class="line">	    System.out.println();</span><br><span class="line">	    </span><br><span class="line">	    for (int[] row : chessArr2) &#123;</span><br><span class="line">			for(int data : row) &#123;</span><br><span class="line">				System.out.printf(&quot;%s\t&quot;, data);</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125;</span><br><span class="line">	    </span><br><span class="line">	    </span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">原始的二维数组</span><br><span class="line">0	0	0	0	0	0	0	0	0	0	0	</span><br><span class="line">0	0	1	0	0	0	0	0	0	0	0	</span><br><span class="line">0	0	0	2	0	0	0	0	0	0	0	</span><br><span class="line">0	0	0	0	0	0	0	0	0	0	0	</span><br><span class="line">0	0	0	0	0	2	0	0	0	0	0	</span><br><span class="line">0	0	0	0	0	0	0	0	0	0	0	</span><br><span class="line">0	0	0	0	0	0	0	0	0	0	0	</span><br><span class="line">0	0	0	0	0	0	0	0	0	0	0	</span><br><span class="line">0	0	0	0	0	0	0	0	0	0	0	</span><br><span class="line">0	0	0	0	0	0	0	0	0	0	0	</span><br><span class="line">0	0	0	0	0	0	0	0	0	0	0	</span><br><span class="line"></span><br><span class="line">得到稀疏数组为~~~~</span><br><span class="line">11	11	3	</span><br><span class="line">1	2	1	</span><br><span class="line">2	3	2	</span><br><span class="line">4	5	2	</span><br><span class="line"></span><br><span class="line">恢复后的二维数组</span><br><span class="line"></span><br><span class="line">0	0	0	0	0	0	0	0	0	0	0	</span><br><span class="line">0	0	1	0	0	0	0	0	0	0	0	</span><br><span class="line">0	0	0	2	0	0	0	0	0	0	0	</span><br><span class="line">0	0	0	0	0	0	0	0	0	0	0	</span><br><span class="line">0	0	0	0	0	2	0	0	0	0	0	</span><br><span class="line">0	0	0	0	0	0	0	0	0	0	0	</span><br><span class="line">0	0	0	0	0	0	0	0	0	0	0	</span><br><span class="line">0	0	0	0	0	0	0	0	0	0	0	</span><br><span class="line">0	0	0	0	0	0	0	0	0	0	0	</span><br><span class="line">0	0	0	0	0	0	0	0	0	0	0	</span><br><span class="line">0	0	0	0	0	0	0	0	0	0	0</span><br></pre></td></tr></table></figure>
-
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://www.bilibili.com/video/av54029771/?p=9&t=244" target="_blank" rel="noopener">尚硅谷 —韩顺平</a></p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/weixin.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">知识学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
+    	 
+        <div class="article-info info-on-right">
+          
+          
 
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/11/我的第一篇博客/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/07/26/操作系统-内存/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          操作系统 ---内存
-        
-      </div>
-    </a>
   
   
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#稀疏数组基本介绍"><span class="toc-number">1.</span> <span class="toc-text">稀疏数组基本介绍:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#稀疏数组的处理方法"><span class="toc-number">2.</span> <span class="toc-text">稀疏数组的处理方法:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二维数组转换稀疏数组思路"><span class="toc-number">3.</span> <span class="toc-text">二维数组转换稀疏数组思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#稀疏数组转换二维数组的思路"><span class="toc-number">4.</span> <span class="toc-text">稀疏数组转换二维数组的思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码实现"><span class="toc-number">5.</span> <span class="toc-text">代码实现:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#输出结果"><span class="toc-number">6.</span> <span class="toc-text">输出结果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-number">7.</span> <span class="toc-text">Reference</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -399,8 +211,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
