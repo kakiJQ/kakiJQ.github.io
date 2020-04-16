@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Jiaqi&#39;s blogs">
 <meta property="og:description" content="Hadoop 3.1.3 —MapReduce一、MapReduce的概述1. Mapreduce定义 MapReduce是一个分布式运算程序的编程框架, 是用户开发“基于Hadoop的数据分析应用” 的核心框架 MapReduce核心功能是将用户编写的业务逻辑代码和自带默认组件整合成一个完整的分布式运算程序, 并运行在一个hadoop集群上">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-04-16T15:13:20.756Z">
+<meta property="og:updated_time" content="2020-04-16T15:21:23.001Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hadoop 3.1.3 ---MapReduce">
 <meta name="twitter:description" content="Hadoop 3.1.3 —MapReduce一、MapReduce的概述1. Mapreduce定义 MapReduce是一个分布式运算程序的编程框架, 是用户开发“基于Hadoop的数据分析应用” 的核心框架 MapReduce核心功能是将用户编写的业务逻辑代码和自带默认组件整合成一个完整的分布式运算程序, 并运行在一个hadoop集群上">
@@ -325,8 +325,8 @@
 <li>在每个ReduceTask开始运行时会调用一次该方法.</li>
 </ul>
 </li>
-<li>reduce()方法: This method is called once for each key. Most applications will define<pre><code>their reduce class by overriding this method. The default implementation
-is an identity function.</code></pre><ul>
+<li>reduce()方法: <ul>
+<li>This method is called once for each key. Most applications will define their reduce class by overriding this method. The default implementation is an identity function.</li>
 <li>为同一个key(map端输出的数据可能有相同key的多个kv对,称之为一组kv)执行一次reduce方法。</li>
 </ul>
 </li>
