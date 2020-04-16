@@ -152,6 +152,389 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Hadoop 3.1.3 ---MapReduce" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/13/Hadoop 3.1.3 ---MapReduce/">Hadoop 3.1.3 ---MapReduce</a>
+    </h1>
+  
+
+
+        
+        <a href="/2020/04/13/Hadoop 3.1.3 ---MapReduce/" class="archive-article-date">
+  	<time datetime="2020-04-13T15:13:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h1 id="Hadoop-3-1-3-—MapReduce"><a href="#Hadoop-3-1-3-—MapReduce" class="headerlink" title="Hadoop 3.1.3 —MapReduce"></a>Hadoop 3.1.3 —MapReduce</h1><h3 id="一、MapReduce的概述"><a href="#一、MapReduce的概述" class="headerlink" title="一、MapReduce的概述"></a>一、MapReduce的概述</h3><h5 id="1-Mapreduce定义"><a href="#1-Mapreduce定义" class="headerlink" title="1. Mapreduce定义"></a>1. Mapreduce定义</h5><ul>
+<li>MapReduce是<strong>一个分布式运算程序的编程框架</strong>, 是用户开发“基于Hadoop的数据分析应用” 的核心框架</li>
+<li>MapReduce核心功能是将<strong>用户编写的业务逻辑代码</strong>和<strong>自带默认组件</strong>整合成一个完整的分布式运算程序, 并运行在一个hadoop集群上</li>
+</ul>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">知识学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/13/Hadoop 3.1.3 ---MapReduce/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Hadoop3.1.3 ---HDFS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/12/Hadoop3.1.3 ---HDFS/">Hadoop3.1.3 ---HDFS</a>
+    </h1>
+  
+
+
+        
+        <a href="/2020/04/12/Hadoop3.1.3 ---HDFS/" class="archive-article-date">
+  	<time datetime="2020-04-12T02:10:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h1 id="Hadoop3-1-3-—HDFS"><a href="#Hadoop3-1-3-—HDFS" class="headerlink" title="Hadoop3.1.3 —HDFS"></a>Hadoop3.1.3 —HDFS</h1><h3 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h3><h5 id="1-定义"><a href="#1-定义" class="headerlink" title="1. 定义"></a>1. 定义</h5><ul>
+<li>HDFS(Hadoop Distributed File System)是分布式文件系统</li>
+<li>通过目录树来定位文件<ul>
+<li>与Linux 结构相同</li>
+</ul>
+</li>
+<li>通过多台机器来联合存储数据<ul>
+<li>各个节点的角色不同</li>
+</ul>
+</li>
+<li>一次写入,多次读出,不适合修改<ul>
+<li>可以在文件后面追加内容,但是不能修改</li>
+<li>如果修改, 只能先下载文件进行修改, 再上传</li>
+</ul>
+</li>
+</ul>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">知识学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/12/Hadoop3.1.3 ---HDFS/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-hadoop 3.1.3 --- 群起集群" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/10/hadoop 3.1.3 --- 群起集群/">Hadoop 3.1.3 --- 群起集群</a>
+    </h1>
+  
+
+
+        
+        <a href="/2020/04/10/hadoop 3.1.3 --- 群起集群/" class="archive-article-date">
+  	<time datetime="2020-04-10T02:10:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h1 id="Hadoop-3-1-3-—-群起集群"><a href="#Hadoop-3-1-3-—-群起集群" class="headerlink" title="Hadoop 3.1.3 — 群起集群"></a>Hadoop 3.1.3 — 群起集群</h1><h3 id="一、SSH无密码登录"><a href="#一、SSH无密码登录" class="headerlink" title="一、SSH无密码登录"></a>一、SSH无密码登录</h3><h5 id="1-ssh-key-gen生成密钥对"><a href="#1-ssh-key-gen生成密钥对" class="headerlink" title="1. ssh-key-gen生成密钥对:"></a>1. ssh-key-gen生成密钥对:</h5><ul>
+<li>公钥 (public key)</li>
+<li>私钥 (private key)</li>
+<li>两个可以互相解密<ul>
+<li>公钥 (public key) 可以解密 私钥 (private key)</li>
+<li>私钥 (private key) 可以解密 公钥 (public key) </li>
+</ul>
+</li>
+</ul>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">知识学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/10/hadoop 3.1.3 --- 群起集群/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Hadoop 3.1.3 ---初步介绍及准备" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/09/Hadoop 3.1.3 ---初步介绍及准备/">Hadoop 3.1.3 ---初步介绍及准备</a>
+    </h1>
+  
+
+
+        
+        <a href="/2020/04/09/Hadoop 3.1.3 ---初步介绍及准备/" class="archive-article-date">
+  	<time datetime="2020-04-09T02:10:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h1 id="Hadoop-3-1-3-—初步介绍及准备"><a href="#Hadoop-3-1-3-—初步介绍及准备" class="headerlink" title="Hadoop 3.1.3 —初步介绍及准备"></a>Hadoop 3.1.3 —初步介绍及准备</h1><h3 id="一、大数据概念"><a href="#一、大数据概念" class="headerlink" title="一、大数据概念"></a>一、大数据概念</h3><h5 id="1-数据超级大"><a href="#1-数据超级大" class="headerlink" title="1. 数据超级大"></a>1. 数据超级大</h5><p>当数据量特别大的话, 一台计算机的硬件(硬盘和内存不够)是无法支持海量数据的计算和存储的, 所以我们需要解决这个问题:</p>
+<ul>
+<li>怎么存 (分布式存储)</li>
+<li>怎么算 (分布式计算)</li>
+<li>主要解决: <ul>
+<li>海量数据存储</li>
+<li>海量数据分析计算</li>
+</ul>
+</li>
+</ul>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">知识学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/09/Hadoop 3.1.3 ---初步介绍及准备/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-HaspMap" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
